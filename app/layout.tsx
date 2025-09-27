@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import { Navbar } from "@/components/navbar"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -16,6 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "IntelliBin - Intelligent Household Waste Segregation & Recycling Ecosystem",
   description: "AI-powered waste segregation and recycling system for smart cities. Smart India Hackathon 2025.",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -25,7 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }

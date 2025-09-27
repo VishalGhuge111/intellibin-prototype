@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
+import { useRouter } from "next/navigation"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { OrbitControls, Environment, Text, Center } from "@react-three/drei"
 import { Button } from "@/components/ui/button"
@@ -145,8 +146,14 @@ function RotatingDustbin() {
   )
 }
 
-export function LandingPage({ onNavigate }: { onNavigate: (section: string) => void }) {
+export function LandingPage() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  const router = useRouter()
+
+  const handleNavigation = (path: string) => {
+    router.push(path)
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
 
   const features = [
     {
@@ -228,13 +235,11 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
         <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-primary/20 to-emerald-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
 
-        <div className="container mx-auto px-6 lg:px-8 py-24 relative max-w-7xl">
+        <div className="container mx-auto px-6 py-24 relative max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content - Enhanced typography and spacing */}
             <div className="space-y-10">
               <div className="space-y-6">
-             
-
                 <h1 className="text-6xl lg:text-7xl font-bold text-balance leading-tight">
                   <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                     Intelligent
@@ -257,8 +262,8 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
               <div className="flex flex-wrap gap-6">
                 <Button
                   size="lg"
-                  onClick={() => onNavigate("demo")}
-                  className="gap-3 px-8 py-4 text-lg bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90"
+                  onClick={() => handleNavigation("/demo")}
+                  className="gap-3 px-8 py-4 text-lg bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 cursor-pointer"
                 >
                   <Sparkles className="h-5 w-5" />
                   Try Live Demo
@@ -267,8 +272,8 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
                 <Button
                   variant="outline"
                   size="lg"
-                  onClick={() => onNavigate("3d-model")}
-                  className="gap-3 px-8 py-4 text-lg border-2 hover:bg-primary/5"
+                  onClick={() => handleNavigation("/3d-model")}
+                  className="gap-3 px-8 py-4 text-lg border-2 hover:bg-primary/5 cursor-pointer"
                 >
                   <Recycle className="h-5 w-5" />
                   Explore 3D Model
@@ -331,7 +336,7 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
 
       {/* Stats Section - Enhanced design */}
       <section className="py-20 bg-gradient-to-r from-muted/30 via-background to-muted/30">
-        <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center space-y-4 group">
@@ -352,7 +357,7 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
 
       {/* Video Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-balance">See IntelliBin in Action</h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto">
@@ -365,7 +370,11 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
             <div className="relative aspect-video bg-muted rounded-xl overflow-hidden">
               {!isVideoPlaying ? (
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
-                  <Button size="lg" onClick={() => setIsVideoPlaying(true)} className="gap-2 text-lg px-8 py-6">
+                  <Button
+                    size="lg"
+                    onClick={() => setIsVideoPlaying(true)}
+                    className="gap-2 text-lg px-8 py-6 cursor-pointer"
+                  >
                     <Play className="h-6 w-6" />
                     Watch Demo Video
                   </Button>
@@ -386,7 +395,7 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
 
       {/* How It Works Section */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-balance">How IntelliBin Works</h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto">
@@ -422,7 +431,7 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
 
       {/* Features Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-balance">Powerful Features for Smart Cities</h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto">
@@ -452,7 +461,7 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
 
       {/* CTA Section - Enhanced with better gradient */}
       <section className="py-24 bg-gradient-to-br from-primary/5 via-emerald-50/30 to-background">
-        <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center space-y-10">
             <div className="space-y-6">
               <h2 className="text-4xl lg:text-5xl font-bold text-balance bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
@@ -471,8 +480,8 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
             <div className="flex flex-wrap justify-center gap-6">
               <Button
                 size="lg"
-                onClick={() => onNavigate("demo")}
-                className="gap-3 px-10 py-4 text-lg bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90"
+                onClick={() => handleNavigation("/demo")}
+                className="gap-3 px-10 py-4 text-lg bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 cursor-pointer"
               >
                 <Sparkles className="h-5 w-5" />
                 Start Free Demo
@@ -481,8 +490,8 @@ export function LandingPage({ onNavigate }: { onNavigate: (section: string) => v
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => onNavigate("documentation")}
-                className="gap-3 px-10 py-4 text-lg border-2 hover:bg-primary/5"
+                onClick={() => handleNavigation("/documentation")}
+                className="gap-3 px-10 py-4 text-lg border-2 hover:bg-primary/5 cursor-pointer"
               >
                 <Award className="h-5 w-5" />
                 View SIH Documentation

@@ -123,6 +123,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Added global cursor styles for better UX */
+/* Clickable elements should show pointer cursor */
+button,
+[role="button"],
+.cursor-pointer,
+a,
+[onclick] {
+  cursor: pointer !important;
+}
+
+/* Non-clickable elements should show default cursor */
+.cursor-default,
+p,
+span:not([onclick]):not([role="button"]),
+div:not([onclick]):not([role="button"]):not(.cursor-pointer),
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  cursor: default !important;
+}
+
 /* Hide Next.js DevTools floating badge */
 [data-next-badge] {
   display: none !important;
