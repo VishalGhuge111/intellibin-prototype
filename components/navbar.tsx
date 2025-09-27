@@ -42,7 +42,7 @@ export function Navbar() {
   const documentationItems = [
     { id: "/documentation/", label: "Overview", icon: FileText },
     { id: "/documentation/iot-system-architecture", label: "IoT System", icon: Cpu },
-    { id: "/documentation/backend-architecture", label: "Backend Architecture", icon: Cloud },
+    { id: "/documentation/backend-architecture", label: "Backend System", icon: Cloud },
     { id: "/documentation/municipal-survey", label: "Municipal Survey", icon: Building2 },
   ]
 

@@ -185,7 +185,7 @@ export function MunicipalSurvey() {
               <div className="space-y-4">
                 <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 rounded-lg flex items-center justify-center border-2 border-dashed border-muted-foreground/20 overflow-hidden">
                   <img
-                    src="municipal/team-members-with-municipal-staff-discussing-smart.jpg"
+                    src="/municipal/team-members-with-municipal-staff-discussing-smart.jpg"
                     alt="Meeting with Municipal Officials"
                     className="w-full h-full object-cover"
                   />
