@@ -262,7 +262,7 @@ export function LandingPage() {
               <div className="flex flex-wrap gap-6">
                 <Button
                   size="lg"
-                  onClick={() => handleNavigation("/demo")}
+                  onClick={() => handleNavigation("/intellibin-demo")}
                   className="gap-3 px-8 py-4 text-lg bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 cursor-pointer"
                 >
                   <Sparkles className="h-5 w-5" />
@@ -480,7 +480,7 @@ export function LandingPage() {
             <div className="flex flex-wrap justify-center gap-6">
               <Button
                 size="lg"
-                onClick={() => handleNavigation("/demo")}
+                onClick={() => handleNavigation("/intellibin-demo")}
                 className="gap-3 px-10 py-4 text-lg bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 cursor-pointer"
               >
                 <Sparkles className="h-5 w-5" />

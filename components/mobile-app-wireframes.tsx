@@ -778,11 +778,11 @@ export function MobileAppWireframes() {
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span className="text-sm font-medium">Primary:</span>
-                    <Badge variant="secondary">Flutter 3.x</Badge>
+                    <Badge variant="secondary">React Native</Badge>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm font-medium">Alternative:</span>
-                    <Badge variant="secondary">React Native</Badge>
+                    <Badge variant="secondary">Flutter</Badge>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm font-medium">State Management:</span>
@@ -794,7 +794,7 @@ export function MobileAppWireframes() {
                   </div>
                 </div>
                 <div className="bg-muted p-3 rounded text-sm">
-                  <strong>Rationale:</strong> Flutter chosen for single codebase, native performance, and excellent UI
+                  <strong>Rationale:</strong> React Native chosen for single codebase, native performance, and excellent UI
                   consistency across platforms.
                 </div>
               </CardContent>

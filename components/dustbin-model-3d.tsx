@@ -261,7 +261,7 @@ export function DustbinModel3D() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Zap className="h-4 w-4" />
-                      <span className="text-sm">IR Sensors</span>
+                      <span className="text-sm">UltraSonic Sensors</span>
                     </div>
                     <Badge variant="secondary">Active</Badge>
                   </div>

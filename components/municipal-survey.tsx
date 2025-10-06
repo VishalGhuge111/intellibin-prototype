@@ -19,7 +19,7 @@ import {
 export function MunicipalSurvey() {
   const surveyData = {
     location: "Municipal Corporation Lonavala",
-    date: "23 September 2024",
+    date: "23 September 2025",
   }
 
   const keyFindings = [
