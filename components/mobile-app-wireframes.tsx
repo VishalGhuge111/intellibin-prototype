@@ -57,7 +57,7 @@ export function MobileAppWireframes() {
   ]
 
   const leaderboardData = [
-    { rank: 1, name: "Dhiraj Durgade", coins: 2450, avatar: "PS" },
+    { rank: 1, name: "Vishal Ghuge", coins: 2450, avatar: "PS" },
     { rank: 2, name: "Harsh Pandhe", coins: 2380, avatar: "RK" },
     { rank: 3, name: "Namancris Stephen", coins: 2250, avatar: "AP" },
     { rank: 12, name: "You", coins: 1850, avatar: "YU", isCurrentUser: true },
@@ -163,7 +163,7 @@ export function MobileAppWireframes() {
             <div className="flex justify-between items-center mb-6">
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Good Morning!</h1>
-                <p className="text-gray-600">Janhavi Kashyap</p>
+                <p className="text-gray-600">Vishal Ghuge</p>
               </div>
               <div className="relative">
                 <Bell className="h-6 w-6 text-gray-600" />
@@ -434,7 +434,7 @@ export function MobileAppWireframes() {
                     <span className="text-xs">👑</span>
                   </div>
                 </div>
-                <div className="text-xs text-gray-600">Dhiraj Durgade</div>
+                <div className="text-xs text-gray-600">Vishal Ghuge</div>
                 <div className="text-sm font-bold text-primary">2450</div>
                 <div className="w-8 h-20 bg-primary rounded-t-lg mt-2"></div>
               </div>
@@ -502,7 +502,7 @@ export function MobileAppWireframes() {
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-2xl font-bold text-white">PS</span>
               </div>
-              <h1 className="text-xl font-bold text-gray-900">Janhavi Kashyap</h1>
+              <h1 className="text-xl font-bold text-gray-900">Vishal Ghuge</h1>
               <p className="text-gray-600">Eco Warrior since Sept 2025</p>
             </div>
 
