@@ -57,9 +57,9 @@ export function MobileAppWireframes() {
   ]
 
   const leaderboardData = [
-    { rank: 1, name: "Vishal Ghuge", coins: 2450, avatar: "PS" },
-    { rank: 2, name: "Harsh Pandhe", coins: 2380, avatar: "RK" },
-    { rank: 3, name: "Namancris Stephen", coins: 2250, avatar: "AP" },
+    { rank: 1, name: "Vishal Ghuge", coins: 2450, avatar: "VG" },
+    { rank: 2, name: "Harsh Pandhe", coins: 2380, avatar: "HP" },
+    { rank: 3, name: "Namancris Stephen", coins: 2250, avatar: "NS" },
     { rank: 12, name: "You", coins: 1850, avatar: "YU", isCurrentUser: true },
   ]
 
@@ -500,7 +500,7 @@ export function MobileAppWireframes() {
             {/* Header */}
             <div className="text-center mb-6">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-2xl font-bold text-white">PS</span>
+                <span className="text-2xl font-bold text-white">VG</span>
               </div>
               <h1 className="text-xl font-bold text-gray-900">Vishal Ghuge</h1>
               <p className="text-gray-600">Eco Warrior since Sept 2025</p>
